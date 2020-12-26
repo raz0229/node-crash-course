@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./partials/head.ejs');%>
+<title>NodeJS Test | <%= whateverTitle%></title>
+  <h1>About Page</h1>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Vivamus nec nunc eu nibh imperdiet malesuada nec sit amet
+     ligula. Pellentesque massa mi, sagittis a libero vitae,
+     posuere bibendum nulla. Proin mattis felis ullamcorper
+     ullamcorper pretium. Nullam mollis pellentesque convallis.
+     Mauris et ornare velit, ut rutrum urna. Morbi nec neque
+     tristique, sollicitudin velit ac, fringilla sem.</p>
+  <%- include('./partials/nav.ejs'); %>
+  <%- include('./partials/footer.ejs');%>
+</body>
+<%
+    const d = new Date();
+    var col = (d.getSeconds()<30) ? "cornflowerblue" : "orange";
+%>
+<style media="screen">
+   p {
+     background-color: <%=col%>;
+		border: solid 1px black;
+		padding: 5px 5px 5px 5px;
+  }
+</style>
+</html>
